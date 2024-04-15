@@ -26,9 +26,9 @@ public class TobiiTracker: ObservableObject {
   
   /// The scanning frequency, which mean howmany time we collect the tobii data
   /// from `currentPupilDialect` in one seconds
-  var customFrequency: UInt
+  public var customFrequency: UInt
   
-  init(frequency: UInt = 60) {
+  public init(frequency: UInt = 60) {
     self.customFrequency = frequency
   }
   
