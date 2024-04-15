@@ -92,11 +92,10 @@ extension TobiiTracker {
      arch -x86_64 /usr/local/homebrew/bin/python3.10 [script.py in the bundle]
      */
     
-    guard
-      let scriptPath = Bundle.main.path(forResource: "Python/script", ofType: "py")
-    else {
+    guard let scriptPath = Bundle.module.path(forResource: "script", ofType: "py") else {
       return
     }
+    
     // because the python script will need to run as x86_64 architechture
     // we need a bit config for the command
     
